@@ -25,6 +25,15 @@ vim.api.nvim_set_keymap("!", "<D-v>", "<C-R>+", { noremap = true, silent = true 
 vim.api.nvim_set_keymap("t", "<D-v>", "<C-R>+", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("v", "<D-v>", "<C-R>+", { noremap = true, silent = true })
 
+-- Move Lines (default alt mappings don’t play nicely with macOS)
+map("n", "]x", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down" })
+map("n", "[x", "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = "Move Up" })
+map("i", "]x", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Down" })
+map("i", "[x", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
+map("v", "]x", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc = "Move Down" })
+map("v", "[x", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
+
+-- Copy path of current file to OS clipboard
 map("n", "<leader>c", '<cmd>let @+ = expand("%")<cr>', { desc = "Copy the current file path" })
 map(
   "n",
