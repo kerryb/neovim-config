@@ -33,7 +33,7 @@ map("i", "[x", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
 map("v", "]x", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc = "Move Down" })
 map("v", "[x", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
 
--- Copy path of current file to OS clipboard
+-- Miscellaneous
 map("n", "<leader>c", '<cmd>let @+ = expand("%")<cr>', { desc = "Copy the current file path" })
 map(
   "n",
@@ -41,3 +41,5 @@ map(
   '<cmd>let @+ = expand("%") . ":" . line(".")<cr>',
   { desc = "Copy the current file path and line no" }
 )
+
+map("n", "<leader>h", "<cmd>nohlsearch<cr>", { desc = "Clear search result highlighting" })
