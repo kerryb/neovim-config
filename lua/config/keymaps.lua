@@ -9,6 +9,19 @@
 
 local map = vim.keymap.set
 
+-- Mac copy/paste (from Neovide FAQ)
+if vim.g.neovide then
+  local function copy()
+    vim.cmd([[normal! "+y]])
+  end
+  local function paste()
+    vim.api.nvim_paste(vim.fn.getreg("+"), true, -1)
+  end
+
+  vim.keymap.set("v", "<D-c>", copy, { silent = true, desc = "Copy" })
+  vim.keymap.set({ "n", "i", "v", "c", "t" }, "<D-v>", paste, { silent = true, desc = "Paste" })
+end
+
 -- Move Lines (default alt mappings don’t play nicely with macOS)
 map("n", "]x", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down" })
 map("n", "[x", "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = "Move Up" })
