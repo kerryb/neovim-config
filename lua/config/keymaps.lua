@@ -7,8 +7,6 @@
 -- " <leader>C for <filename>:<current line>
 -- nnoremap <leader>C :let @+ = expand("%") . ":" . line(".")<cr>
 
-local map = vim.keymap.set
-
 -- Mac copy/paste (from Neovide FAQ)
 if vim.g.neovide then
   local function copy()
@@ -23,20 +21,20 @@ if vim.g.neovide then
 end
 
 -- Move Lines (default alt mappings don’t play nicely with macOS)
-map("n", "]x", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down" })
-map("n", "[x", "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = "Move Up" })
-map("i", "]x", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Down" })
-map("i", "[x", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
-map("v", "]x", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc = "Move Down" })
-map("v", "[x", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
+vim.keymap.set("n", "]x", "<cmd>execute 'move .+' . v:count1<cr>==", { desc = "Move Down" })
+vim.keymap.set("n", "[x", "<cmd>execute 'move .-' . (v:count1 + 1)<cr>==", { desc = "Move Up" })
+vim.keymap.set("i", "]x", "<esc><cmd>m .+1<cr>==gi", { desc = "Move Down" })
+vim.keymap.set("i", "[x", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
+vim.keymap.set("v", "]x", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc = "Move Down" })
+vim.keymap.set("v", "[x", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
 
 -- Miscellaneous
-map("n", "<leader>c", '<cmd>let @+ = expand("%")<cr>', { desc = "Copy the current file path" })
-map(
+vim.keymap.set("n", "<leader>c", '<cmd>let @+ = expand("%")<cr>', { desc = "Copy the current file path" })
+vim.keymap.set(
   "n",
   "<leader>C",
   '<cmd>let @+ = expand("%") . ":" . line(".")<cr>',
   { desc = "Copy the current file path and line no" }
 )
 
-map("n", "<leader>h", "<cmd>nohlsearch<cr>", { desc = "Clear search result highlighting" })
+vim.keymap.set("n", "<leader>h", "<cmd>nohlsearch<cr>", { desc = "Clear search result highlighting" })
