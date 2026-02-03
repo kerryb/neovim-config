@@ -23,11 +23,10 @@ vim.keymap.set("i", "[x", "<esc><cmd>m .-2<cr>==gi", { desc = "Move Up" })
 vim.keymap.set("v", "]x", ":<C-u>execute \"'<,'>move '>+\" . v:count1<cr>gv=gv", { desc = "Move Down" })
 vim.keymap.set("v", "[x", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
 
--- Miscellaneous
-vim.keymap.set("n", "<leader>c", '<cmd>let @+ = expand("%")<cr>', { desc = "Copy the current file path" })
+vim.keymap.set("n", "<leader>fy", '<cmd>let @+ = expand("%")<cr>', { desc = "Copy the current file path" })
 vim.keymap.set(
   "n",
-  "<leader>C",
+  "<leader>fY",
   '<cmd>let @+ = expand("%") . ":" . line(".")<cr>',
   { desc = "Copy the current file path and line no" }
 )
