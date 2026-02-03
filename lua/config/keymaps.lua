@@ -2,11 +2,6 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
--- " Copy the current file path with <leader>c
--- nnoremap <leader>c :let @+ = expand("%")<cr>
--- " <leader>C for <filename>:<current line>
--- nnoremap <leader>C :let @+ = expand("%") . ":" . line(".")<cr>
-
 -- Mac copy/paste (from Neovide FAQ)
 if vim.g.neovide then
   local function copy()
