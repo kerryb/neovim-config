@@ -32,3 +32,14 @@ vim.keymap.set(
 )
 
 vim.keymap.set("n", "<leader>h", "<cmd>nohlsearch<cr>", { desc = "Clear search result highlighting" })
+
+-- Switch to explorer if already open, rather than closing it (https://github.com/folke/snacks.nvim/issues/1628#issuecomment-2748889194)
+vim.keymap.set("n", "<leader>e", function()
+  if Snacks.picker.get({ source = "explorer" })[1] == nil then
+    Snacks.picker.explorer()
+  elseif Snacks.picker.get({ source = "explorer" })[1]:is_focused() == true then
+    Snacks.picker.explorer()
+  elseif Snacks.picker.get({ source = "explorer" })[1]:is_focused() == false then
+    Snacks.picker.get({ source = "explorer" })[1]:focus()
+  end
+end)
