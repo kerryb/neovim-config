@@ -7,7 +7,6 @@
   "conform.nvim": { "branch": "master", "commit": "086a40dc7ed8242c03be9f47fbcee68699cc2395" },
   "dial.nvim": { "branch": "master", "commit": "f2634758455cfa52a8acea6f142dcd6271a1bf57" },
   "elixir-extras.nvim": { "branch": "main", "commit": "c792919fcf1048ede9e32be84f6cdf56f1916d0a" },
-  "fileline.nvim": { "branch": "main", "commit": "c116aa8dd7aa7e1db6938f872285e598dc9ee00b" },
   "flash.nvim": { "branch": "main", "commit": "fcea7ff883235d9024dc41e638f164a450c14ca2" },
   "friendly-snippets": { "branch": "main", "commit": "6cd7280adead7f586db6fccbd15d2cac7e2188b9" },
   "fuzzy-projectionist.vim": { "branch": "master", "commit": "fa0ee95ee55aa0f6b806f961886e95ecd7de993a" },
@@ -47,6 +46,7 @@
   "vim-dadbod": { "branch": "master", "commit": "6d1d41da4873a445c5605f2005ad2c68c99d8770" },
   "vim-dadbod-completion": { "branch": "master", "commit": "a8dac0b3cf6132c80dc9b18bef36d4cf7a9e1fe6" },
   "vim-dadbod-ui": { "branch": "master", "commit": "07e92e22114cc5b1ba4938d99897d85b58e20475" },
+  "vim-fetch": { "branch": "master", "commit": "b88bc5c4a8652b73bcdb577e0c90700a5064fd00" },
   "vim-projectionist": { "branch": "master", "commit": "5ff7bf79a6ef741036d2038a226bcb5f8b1cd296" },
   "vim-projectionist-elixir": { "branch": "master", "commit": "9cb5075a75af7d7b1b00a80e49d8fb0fedc66f27" },
   "which-key.nvim": { "branch": "main", "commit": "3aab2147e74890957785941f0c1ad87d0a44c15a" }
