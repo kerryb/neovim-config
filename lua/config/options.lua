@@ -3,3 +3,4 @@
 -- Add any additional options here
 
 vim.o.guifont = "SauceCodePro Nerd Font:h11"
+vim.wo.relativenumber = false
