@@ -7,6 +7,7 @@
   "conform.nvim": { "branch": "master", "commit": "619363c30309d29ffa631e67c8183f2a72caa373" },
   "dial.nvim": { "branch": "master", "commit": "f2634758455cfa52a8acea6f142dcd6271a1bf57" },
   "elixir-extras.nvim": { "branch": "main", "commit": "c792919fcf1048ede9e32be84f6cdf56f1916d0a" },
+  "elixir-tools.nvim": { "branch": "main", "commit": "0aab0ba9eddc9db317bb06cd60d66f23c82106ff" },
   "flash.nvim": { "branch": "main", "commit": "fcea7ff883235d9024dc41e638f164a450c14ca2" },
   "friendly-snippets": { "branch": "main", "commit": "6cd7280adead7f586db6fccbd15d2cac7e2188b9" },
   "fuzzy-projectionist.vim": { "branch": "master", "commit": "fa0ee95ee55aa0f6b806f961886e95ecd7de993a" },
