@@ -1,6 +1,6 @@
 return {
   "neovim/nvim-lspconfig",
   opts = {
-    elixirls = { enabled = false },
+    elixirls = { mason = false, enabled = false },
   },
 }
