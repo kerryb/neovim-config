@@ -3,7 +3,7 @@ return {
   opts = {
     servers = {
       elixirls = { mason = false, enabled = false },
-      expert = {},
+      dexter = {},
     },
   },
 }
